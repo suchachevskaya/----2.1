@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="myapp" class="demo">
+    <span>Multiline message is:</span>
+    <p style="white-space: pre-line;">{{ message }}</p>
+    <br />
+    <textarea v-model="message" placeholder="add multiple lines"></textarea>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/vue.js"></script>
+</body>
+<script>
+Vue.createApp({
+  data() {
+    return {
+      message: ''
+    }
+  }
+}).mount('#myapp')
+</script>
+
+</html>
+<!-- https://v3.ru.vuejs.org/ru/guide/forms.html#%D1%82%D0%B5%D0%BA%D1%81%D1%82 -->
